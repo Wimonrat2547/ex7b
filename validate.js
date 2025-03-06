@@ -1,6 +1,8 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
+
+  //ตรวจสอบว่า sid ต้องมีความยาว 10 ตัวอักษร และเป็นตัวเลขทั้งหมด
+  if  (sid.length === 10 && /^\d{10}$/.test(sid)) {
     return true;
   } else {
     return false;
